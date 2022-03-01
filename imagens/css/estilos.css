@@ -19,6 +19,10 @@ header  img{
     margin-top:10px;
 }
 
+#planos{
+    padding: 80px 0;
+}
+
 .container{
 
     /*ajustando o container dentro do header*/
@@ -27,4 +31,43 @@ header  img{
     margin: 0 auto;
     padding-left:15px;
     padding-right:15px;
+}
+
+article{
+    border:1px solid #95a4a5;
+    width:350px;
+    padding:10px;
+
+}
+
+article > h2{
+    background-color: #95a4a5;
+    color:#fff;
+    text-align:center;
+    line-height:2.5;
+    /*Relizado o ajuste da caixa interna com a externa, como havia inserido um padding de 10px no article o h2 não estava colando então foi removido 10px no h2 para ajustar a caixa interna com a externa e inserido 2px no margin-bottom para o texto não sobrepor na caixa interna*/
+    margin: -10px;
+    margin-bottom: 2px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+article > div{
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+article > ul{
+    list-style: none;
+    padding: 0; /*Padding 0px para ajustar corretamente n cixa quando for centralizar*/
+    margin: 20px 0;
+}
+
+article > ul > li{
+    text-align: center;
+}
+
+article > footer{
+    text-align: center;
 }
