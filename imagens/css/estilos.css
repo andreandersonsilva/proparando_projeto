@@ -1,0 +1,30 @@
+/*Este seletor define de forma geral qualquer instrução que for inserida nele, o Border-box vai padronizar todas as caixas sem precisar calcular as diferenças */
+* {
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+
+header{
+
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+/*Se eu acrescentar o sinal > eu indico que este IMG é filho direto de header neste caso e isso pode gerar alguns problemas, então é melhor deixar sem (header > img)*/
+header  img{
+    margin-top:10px;
+}
+
+.container{
+
+    /*ajustando o container dentro do header*/
+    
+    width:1200px;
+    margin: 0 auto;
+    padding-left:15px;
+    padding-right:15px;
+}
