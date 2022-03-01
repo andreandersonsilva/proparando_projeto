@@ -37,7 +37,16 @@ article{
     border:1px solid #95a4a5;
     width:350px;
     padding:10px;
+    float:left;
+    margin-right: 30px;
 
+}
+
+/*Recurso utilizado após alinhas as caixas com os planos: Inserindo o after na caixa planos eu reservo todo o box para o conteúdo dele, qualquer texto ou elemento inserido depois, vai dicar abaixo*/
+#planos::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 article > h2{
