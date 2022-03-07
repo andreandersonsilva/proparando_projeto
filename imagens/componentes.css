@@ -1,0 +1,75 @@
+/*---------------*\
+      PLANO
+\*---------------*/
+
+.plano{
+    border:1px solid #95a4a5;
+    
+    padding:10px;
+    
+
+}
+
+.plano__cabecalho{
+    background-color: #95a4a5;
+    color:#fff;
+    text-align:center;
+    line-height:2.5;
+    /*Relizado o ajuste da caixa interna com a externa, como havia inserido um padding de 10px no article o h2 não estava colando então foi removido 10px no h2 para ajustar a caixa interna com a externa e inserido 2px no margin-bottom para o texto não sobrepor na caixa interna*/
+    margin: -10px;
+    margin-bottom: 2px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.plano__preco{
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.plano__caracteristicas{
+    list-style: none;
+    padding: 0; /*Padding 0px para ajustar corretamente n cixa quando for centralizar*/
+    margin: 20px 0;
+}
+
+.plano__caracteristicas > li{
+    text-align: center;
+}
+
+.plano__rodape{
+    text-align: center;
+}
+
+/*---------------*\
+      BOTÃO
+\*---------------*/
+
+
+.botao{
+    display: inline-block;
+    background-color: #bbb;
+    color:#fff;
+    padding:12px 16px;
+    text-decoration: none;
+}
+
+/*Duas vezes dois pontos é um pseudo elemento um vez dois pontos uma pseudo classe*/
+/*Modificando a cor do botão quando passamos o mouse por cima ou quando utilizamos a tecla TAB do teclado*/
+
+.botao:hover, .botao:focus{
+    background-color: #aaa;
+    text-decoration:none;
+    color:#fff;
+}
+
+
+/*Aqui foi criado um modificador para o botão*/
+.botao--assinar{
+    background-color: #127d00;
+}
+/*No modificar foi inserido o hover e focus para dar os devido efeitos quando passar o mouse e clicar nos botões */
+.botao--assinar:hover, .botao--assinar:focus{
+    background-color: #0e6400;
+}

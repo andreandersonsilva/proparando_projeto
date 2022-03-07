@@ -12,12 +12,14 @@
     <!--Bootstrap já vem com o normalize dentro dele, então não é necessário inserir ele
     <link rel="stylesheet" href="css/normalize.css">
     -->
-    <link rel="stylesheet" href="css/estilos.css">
-    
+
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
 </head>
 
 <body>
-    <header>
+    <header class="layout-cabecalho">
         <!--Foi criado um container para deixar organizdos os itens e não ocorrer uma distorção dependendo da qualidade da tela do usuário-->
         <div class="container">
             <img src="logo02_projeto.png"   width="80" alt="MyPilas">
@@ -27,16 +29,17 @@
         
         <!--Como já estava determinado no CSS a medida da DIV container de 1200px, apenas inseri novamente a mesma div do header-->
         <div class="container">
-            <div id="planos">
+            <!--Devido o pedo do ID, para BEM é melhor utilizar CLASSES, não há problema neste caso de utilizar os dois na TAG abaixo-->
+            <div id="planos" class="layout-planos">
                 <!--Classe inserida quando se trabalha com o bootstrap-->
                 <div class="row">
                     <!--Pela documentação do bootstrap é verificado a classe abaixo que informa a medida das colunas e em quantas partes de doze serão distribuidas as caixas (article) do layout-->
                     <!--Em todos os article foram inseridas as classes col-md-4 pois caso não seja feito dessa forma as caixas ficam coladas umas nas outras-->
                     <div class="col-md-4">
-                        <article>
-                            <h2>Autônomo</h2>
-                            <div>R$59/mês</div>
-                            <ul>
+                        <article class="plano">
+                            <h2 class="plano__cabecalho">Autônomo</h2>
+                            <div class="plano__preco">R$59/mês</div>
+                            <ul class="plano__caracteristicas">
                                 <li>Até <strong>2 usuários</strong></li>
                                 <li><strong>500MB</strong> de armazenamento</li>
                                 <li>Lançamentos ilimitados</li>
@@ -45,17 +48,18 @@
                             </ul>
                             <!--Não h[a problema em cirar um footer dentro do Article ou qulquer outro bloco-->
                     
-                            <footer>
-                                <a href="assine.html" class="botao">Assinar</a>
+                            <footer class="plano__rodape">
+                                <!--Criada a classe botao e botao--assinar e com isso podemos trabalhar de forma separada com as classes no CSS-->
+                                <a href="assine.html" class="botao botao--assinar">Assinar</a>
                             </footer>
                                     
                         </article>
                     </div>
                     <div class="col-md-4">    
-                        <article>
-                            <h2>Micro</h2>
-                            <div>R$89/mês</div>
-                            <ul>
+                        <article class="plano">
+                            <h2 class="plano__cabecalho">Micro</h2>
+                            <div class="plano__preco">R$89/mês</div>
+                            <ul class="plano__caracteristicas">
                                 <li>Até <strong>6 usuários</strong></li>
                                 <li><strong>1GB</strong> de armazenamento</li>
                                 <li>Lançamentos ilimitados</li>
@@ -64,17 +68,17 @@
                             </ul>
                             <!--Não h[a problema em cirar um footer dentro do Article ou qulquer outro bloco-->
                     
-                            <footer>
-                                <a href="assine.html" class="botao">Assinar</a>
+                            <footer class="plano__rodape">
+                                <a href="assine.html" class="botao botao--assinar">Assinar</a>
                             </footer>
 
                         </article>
                     </div>
                     <div class="col-md-4">    
-                        <article>
-                            <h2>Pequena</h2>
-                            <div>R$99/mês</div>
-                            <ul>
+                        <article class="plano">
+                            <h2 class="plano__cabecalho">Pequena</h2>
+                            <div class="plano__preco">R$99/mês</div>
+                            <ul class="plano__caracteristicas">
                                 <li>Até <strong>10 usuários</strong></li>
                                 <li><strong>5GB</strong> de armazenamento</li>
                                 <li>Lançamentos ilimitados</li>
@@ -83,9 +87,9 @@
                             </ul>
                             <!--Não h[a problema em cirar um footer dentro do Article ou qulquer outro bloco-->
                     
-                            <footer>
+                            <footer class="plano__rodape">
                                 <!--Criada classe botao e inseridos os códigos no CSS na classe .botao-->
-                                <a href="assine.html" class="botao" >Assinar</a>
+                                <a href="assine.html" class="botao botao--assinar" >Assinar</a>
                             </footer>
 
                         </article>
