@@ -3,12 +3,34 @@
 \*---------------*/
 
 .plano{
+    /*A caixa vermelha estava utilizando outro ponto como posicionamento relativo, para determinar um ponto relativo, no próprio plano inserimos o position relative*/
+    position: relative;
+
     border:1px solid #95a4a5;
     
     padding:10px;
 
     font-size: 0.875rem;
     
+
+}
+
+/*Inserindo caixa vermelha no bloco micro*/
+.plano--mais-popular::after{
+    position: absolute;
+    top:-10px;
+    left: -10px;
+
+    /*Forma de inserir texto direto pelo CSS em algum campo*/
+    content: "MAIS POPULAR";
+    
+    background-color: #c20303;
+    color: #fff;
+
+    font-size: 0.7142em;
+    line-height: 2.5;/*Vi abrir espaço inferior e superior na caixa vermelha, 2x e meia*/
+
+    padding: 0 10px;
 
 }
 
@@ -186,4 +208,12 @@
 
     color: #fff;
     text-align: center;
+}
+
+/*Determino um ponto onde a alteração vai ser feita e com isso não haverá alteração antes desse ponto*/
+@media(max-width: 749px){
+    /*div:not(classe) para não aplicar a regra na últim coluna e conforme o código, não deixar um espaçamento grande quando diminuir a tela*/
+    .layout-planos .row > div:not(.ultima-coluna){
+        margin-bottom: 40px;
+    }
 }
