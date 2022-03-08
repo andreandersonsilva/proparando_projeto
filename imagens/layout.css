@@ -2,7 +2,22 @@
 
     height: 80px;
     border-bottom: 1px solid #ccc;
+
+    background-color: #fff;
 }
+
+/*Fixando o posicionamento do cabeçalho*/
+.layout-cabecalho--home{
+    /*Informa que deve ser fixo mesmo rolando a página*/
+    position: fixed;
+    /*Determina neste caso 0px de espaçamento em cima e dos lados*/
+    top: 0;
+    left: 0;
+    right: 0;
+    /*Serve para sobrepor neste caso o cabeçalho sobre outras TAGs da página, quanto maior o número é melhor, exemplo 9999*/
+    z-index: 1;
+}
+
 /*Se eu acrescentar o sinal > eu indico que este IMG é filho direto de header neste caso e isso pode gerar alguns problemas, então é melhor deixar sem (header > img)*/
 .layout-cabecalho  img{
     margin-top:10px;
@@ -14,6 +29,7 @@
 
 .layout-chamada{
     padding: 80px 0;
+    margin-top: 60px; /*MArgem usada paraa dar espaço superior e o cabeçalho encaixar dorretamente na página, pois quando ele fica fixo as outras TAGs ocupam seu espaço e ele fica por cima*/
 
     background-color: #7ab55c;
 }
@@ -58,3 +74,8 @@
     clear: both;
 }
 */
+
+.layout-depoimento{
+    padding: 80px 0;
+    background-color: #e7e7e7;
+}

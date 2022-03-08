@@ -1,7 +1,7 @@
 /*Ao determinar o tamanho da fonte padrão do arquivo HTML aqui, eu forcei o navegador trabalhar com o padrão de 16px do navegador e com isso ajustar os demais tamanhos com EM ou REM*/
 
 html{
-    font-size:100%;
+    font-size:80%;
 }
 
 
