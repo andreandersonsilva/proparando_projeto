@@ -157,6 +157,7 @@
 \*---------------*/
 
 .depoimento{
+    position: relative;
     font-size: 2.2rem;
 }
 
@@ -164,6 +165,7 @@
 /*Ajuste para dispositivos menores*/
 @media(min-width: 992px){
     .depoimento{
+        
         /*espaço interno do depoimento*/
         padding-left: 15%;
         padding-right: 15%;
@@ -178,6 +180,19 @@
 
     text-align: center;
     font-size: 1em;
+}
+
+/*Inserindo aspas no depoimento*/
+.depoimento > blockquote::before{
+    position:absolute;
+    left: 30;
+    top: -62px;
+
+    font-size:8em;
+
+    color:#ccc;
+
+    content: "\201C";
 }
 
 .depoimento__autor{
