@@ -1,6 +1,8 @@
 .layout-cabecalho{
 
     height: 80px;
+    /*Ajustando a altura do menu com o line-heigth*/
+    line-height: 80px;
     border-bottom: 1px solid #ccc;
 
     background-color: #fff;
