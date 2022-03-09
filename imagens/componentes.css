@@ -157,7 +157,6 @@
 \*---------------*/
 
 .depoimento{
-    position: relative;
     font-size: 2.2rem;
 }
 
@@ -175,6 +174,8 @@
 }
 
 .depoimento > blockquote{
+    position: relative;
+
     margin: 0;
     padding: 0 60px;
 
@@ -185,14 +186,14 @@
 /*Inserindo aspas no depoimento*/
 .depoimento > blockquote::before{
     position:absolute;
-    left: 30;
-    top: -62px;
+    left: -0.1172em;
+    top: -0.35em;
 
     font-size:8em;
 
     color:#ccc;
 
-    content: "\201C";
+    content: "\201C"; /*Código encontrado no google como list unicode, inserir sempre \ e o valor*/
 }
 
 .depoimento__autor{
@@ -209,6 +210,18 @@
 
 .depoimento__autor > p{
     margin-top: 10px;
+}
+
+/*---------------*\
+    NAVEGACAO
+\*---------------*/
+
+.navegacao{
+
+}
+
+.navegacao__menu{
+    float: right;
 }
 
 
