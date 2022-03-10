@@ -253,35 +253,65 @@
     MENU
 \*---------------*/
 
+/*Regra geral para os dois tipos de menu*/
 .menu{
-    position: fixed; /*Vai rolar a página e o menu ficará estático*/
-    top:0;
-    left: 0;
-    bottom:0;
-
-    width: 200px;
+ 
     margin:0;
-    padding: 20px;
-    border: 1px solid #eee;
-    
+        
     list-style: none;
 
     font-size: 1.4rem;
 
-    background-color: #fbfbfb;
+       
+}
 
+/*Propriedades para o menu reduzido*/
+@media(max-width: 991px){
+
+    .menu{
+        position: fixed; /*Vai rolar a página e o menu ficará estático*/
+        top:0;
+        left: 0;
+        bottom:0;
     
+        width: 200px;
+       
+        padding: 20px;
+        border: 1px solid #eee;
+        
+            
+        background-color: #fbfbfb;
+    
+        
+    }
+
+    .menu__item{
+        display: block;
+
+        line-height: 3;
+    }
+
+    /*Ajustando o botão do menu de forma individual*/
+    .menu__item--botao{
+        margin-top:20px;
+    }
+
 }
 
-.menu__item{
-    display: block;
+/*Regra para o menu horizontal / tela cheia*/
+@media(min-width: 992px){
 
-    line-height: 3;
-}
+    .menu__item{
+        /*Ajusta o menu na horizontal*/
+        display: inline-block;
+        padding-right: 20px;
+    }
 
-/*Ajustando o botão do menu de forma individual*/
-.menu__item--botao{
-    margin-top:20px;
+    /*Pseudo classe que seleciona o último item no caso do menu insentando os demais em qualque mudança*/
+    .menu__item:last-of-type{
+        padding-right: 0px;
+    }
+
 }
 
 
