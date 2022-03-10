@@ -74,6 +74,8 @@
 
 
 .botao{
+
+    border:none;
     display: inline-block;
     background-color: #bbb;
     color:#fff;
@@ -275,6 +277,7 @@
         bottom:0;
     
         width: 200px;
+        display:none; /*Código usado para o menu lateral ficar indisponível e apenas aparecer quando utilizando o JS clicar nas barrinhas de menu feitas para telas pequenas / abaixo foi inserida a classe .menu--exibindo*/
        
         padding: 20px;
         border: 1px solid #eee;
@@ -283,6 +286,11 @@
         background-color: #fbfbfb;
     
         
+    }
+
+    /*Classe criada para o menu aparecer com o clique nas barras*/
+    .menu--exibindo{
+        display:block;
     }
 
     .menu__item{
@@ -314,8 +322,45 @@
 
 }
 
+/*---------------*\
+ TITULO-FORMULARIO
+\*---------------*/
+
+.titulo-formulario{
+    margin:0;
+    margin-bottom:40px;
+
+    border-bottom: 1px solid #ccc;
+
+    font-size:2.6rem;
+    font-weight: normal;
+    color: #004b86
+}
 
 
+
+/*---------------*\
+ GRUPO-ENTRADA
+\*---------------*/
+.grupo-entrada{
+    margin-bottom:15px;
+}
+
+
+.grupo-entrada > label{
+    /*O display altomático é inline, quando coloco diaplay:block ele já quebra e com isso o nome (Razão Social) passou pra cima do input*/
+    display:block;
+    font-weight: bold;
+}
+
+/*---------------*\
+ CAMPO
+\*---------------*/
+
+.campo{
+    display:block;
+    width:100%;
+}
 
 /*---------------*\
     RODAPE

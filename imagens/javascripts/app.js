@@ -2,5 +2,6 @@ var alternador = document.querySelector('.js-botao-chaveador');
 
 
 alternador.onclick = function(){
-    alert('Clicou');
+   var menu = document.querySelector('.js-menu')
+   menu.classList.toggle('menu--exibindo')
 }

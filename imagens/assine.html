@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyPilas</title>
+
+    <link rel="stylesheet" href="bootstrap.grid.css">
+    <!--Bootstrap já vem com o normalize dentro dele, então não é necessário inserir ele
+    <link rel="stylesheet" href="css/normalize.css">
+    -->
+
+    <link rel="stylesheet" href="componentes.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+
+</head>
+<body>
+
+    <header class="layout-cabecalho">
+        <div class="container">
+
+            <nav class="navegacao navegacao--assinatura">
+                <a href="index.html"><img src="logo02_projeto.png" width="80" alt="MyPilas"></a>
+
+            </nav>
+
+
+        </div>
+
+
+    </header>
+
+    <main class="layout-assinatura">
+        <div class="container">
+            <!--Elemento FORM no HTML é utilizado para formulário / No action é inserido o endereço para onde será desviado o dado informado na página / E também o método de envio que pode ser GET ou POST, informação passada provavelmente pelo desenvolver-->
+            <form action="#" method="post">
+                <h1 class="titulo-formulario">Sua assinatura do MyPilas</h1>
+
+                <div class="grupo-entrada">
+                    <!--QUando crio o campo com o input e o label com a descrição do campo eu vinculo ambos com o mesmo nome. Obs.: Ao vincular os dois eu clico no nome e ele já dá foco ao campo input-->
+                    <label for="razao-social">Razão Social</label>
+                    <input id="razao-social"type="text" class="campo">
+                </div>
+                <div class="grupo-entrada">
+                    
+                    <label for="cnpj">CNPJ</label>
+                    <input id="cnpj"type="text" class="campo">
+                </div>
+                
+                <div style="text-align:center; margin-top: 40px">
+                    <!--Criando o botão / com o type submit ele já submete o formulário para o action informado no form-->
+                    <!--As classes informadas jão estão configuradas no CSS para o botão da página HOME que tem o mesmo formato-->
+                    <input type="submit" value="Assinar MyPilas" class="botao botao--principal">
+                </div>    
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="layout-rodape">
+        <div class="container">
+            <p>&copy; MyPilas. Todos os direitos reservado</p>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>
