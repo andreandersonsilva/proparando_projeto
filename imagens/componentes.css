@@ -360,7 +360,23 @@
 .campo{
     display:block;
     width:100%;
+
+    height: 2.8em;
+
+    font-size:1.4rem;
+
+    padding:5px;
+    border: 1px solid #ccc;
+    border-radius:5px;
+
+    background-color: #fff;
+
 }
+
+
+
+
+
 
 /*---------------*\
     RODAPE
@@ -371,6 +387,8 @@
 
     background-color: #484848;
 
+    margin-top: 40px;
+
     color: #fff;
     text-align: center;
 }
@@ -380,5 +398,6 @@
     /*div:not(classe) para não aplicar a regra na últim coluna e conforme o código, não deixar um espaçamento grande quando diminuir a tela*/
     .layout-planos .row > div:not(.ultima-coluna){
         margin-bottom: 40px;
+        
     }
 }

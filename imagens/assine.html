@@ -31,6 +31,7 @@
 
     </header>
 
+    <!--AJUSTES REALIZADOS NO CSS COMPONENTE / BLOCO CAMPO-->
     <main class="layout-assinatura">
         <div class="container">
             <!--Elemento FORM no HTML é utilizado para formulário / No action é inserido o endereço para onde será desviado o dado informado na página / E também o método de envio que pode ser GET ou POST, informação passada provavelmente pelo desenvolver-->
@@ -40,13 +41,80 @@
                 <div class="grupo-entrada">
                     <!--QUando crio o campo com o input e o label com a descrição do campo eu vinculo ambos com o mesmo nome. Obs.: Ao vincular os dois eu clico no nome e ele já dá foco ao campo input-->
                     <label for="razao-social">Razão Social</label>
-                    <input id="razao-social"type="text" class="campo">
+                    <!--NAME identifica o tipo de input, não tem relação com class ou id, o NAME provavelmente será informado pelo desenvolver backend-->
+                    <input id="razao-social"type="text" name="razaoSocial" class="campo" required>
                 </div>
+
+                <!--Com a classe ROW ele usa o sitema de grid do bootstrap e os campos dentro da mesma div com a classe COL-SM-3 de 12 ele ajusta os campos um do lado do outro e ao dimunir a tela ele coloca um sobre o outro melhorando o visual-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="grupo-entrada">
+                            <label for="cnpj">CNPJ</label>
+                            <input id="cnpj"type="text" name="cnpj" class="campo" required>
+                        </div>
+                    </div>    
+                    <div class="col-sm-3">
+                        <div class="grupo-entrada">
+                            <label for="data-nascimento">Data de fundação</label>
+                            <input id="data-nascimento" type="date" name="dataFundacao" class="campo" required>
+                        </div>
+                    </div>
+                </div>        
+                
                 <div class="grupo-entrada">
-                    
-                    <label for="cnpj">CNPJ</label>
-                    <input id="cnpj"type="text" class="campo">
+                    <label for="responsavel">Responsável</label>
+                    <input id="responsavel" type="text" name="responsavel" class="campo" required>
                 </div>
+
+                <div class0="grupo-entrada">
+                    <label for="emal">E-mail</label>
+                    <input id="email" type="email" name="email" class="campo" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="grupo-entrada">
+                            <label for="estado">Estado</label>
+                            <select id="estado" class="campo">
+                                <option>Selecione</option>
+                                <!--O value é o que vai para o servidor quando escolhemos uma opção, estado neste caso-->>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="CE">Ceará</option>
+                            </select>    
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="grupo-entrada">
+                            <label for="cidade">Cidade</label>
+                            <select id="cidade" class="campo">
+                                <option>Selecione</option>
+                                <!--O value é o que vai para o servidor quando escolhemos uma cidade neste caso-->>
+                                <option value="1">Uberlândia</option>
+                                <option value="2">São Paulo</option>
+                                <option value="3">Fortaleza</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>        
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="grupo-entrada">
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" name="senha" class="campo" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">        
+                        <div class="grupo-entrada">
+                            <label for="confirmacao-senha">Confirme a senha</label>
+                            <input id="confirmacao-senha" type="password" name="confirmacaoSenha" class="campo" required> 
+                        </div>
+                    </div>
+                </div>
+                
                 
                 <div style="text-align:center; margin-top: 40px">
                     <!--Criando o botão / com o type submit ele já submete o formulário para o action informado no form-->
